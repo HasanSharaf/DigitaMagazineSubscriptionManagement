@@ -39,4 +39,3 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 });
 
 Route::post('login', [AuthController::class, 'login']);
-Route::get('/admin/activity-logs', [ActivityLogController::class, 'index']);
