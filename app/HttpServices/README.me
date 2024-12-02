@@ -1,0 +1,25 @@
+Microservice Communication Structure in Laravel
+
+This repository contains a folder structure demonstrating
+ how to implement microservice communication in a Laravel application using the Laravel framework
+ and the concept of micros services. The structure allows for communication between different services
+
+Structure Overview
+
+The project folder contains the following components:
+* ServiceInterface.php: Defines the contract for service classes to handle HTTP requests.
+* BaseService.php: Provides common functionality for making HTTP requests to other services. This includes logic for handling both direct access and accessing services via the authentication service.
+* Services: Contains service classes responsible for handling HTTP requests to other services. Each service class extends the BaseService class and implements the ServiceInterface.
+
+How to Use
+
+1. Place the folder structure in your Laravel project's 'app' directory.
+2. Use the provided service classes in your Project to interact with other microservices.
+    You can extend the functionality by creating additional service classes as needed.
+3. Make sure to update the config/microservice.php file to add Auth Service Base Url.
+
+Contributing
+
+Contributions to improve the structure or add new features are welcome!
+    If you find any issues or have suggestions for improvements.
+
