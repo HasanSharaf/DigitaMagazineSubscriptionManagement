@@ -27,7 +27,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::prefix('api')->middleware(['cors'])->group(function () {
 Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::apiResource('users', UserController::class);
     Route::apiResource('subscriptions', SubscriptionController::class);
@@ -41,5 +40,3 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
 Route::post('login', [AuthController::class, 'login']);
 Route::get('/admin/activity-logs', [ActivityLogController::class, 'index']);
-
-// });
